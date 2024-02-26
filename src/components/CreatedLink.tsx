@@ -4,6 +4,7 @@ import { checkEnvironment } from "@/lib/utility"
 export default function CreatedLinks(props:{localData:Array<{id:string,name:string,img:string,exp:string}>}) {
 
     const localData = props.localData
+    console.log("working")
     return(
         <>
             {

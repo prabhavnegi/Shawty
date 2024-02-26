@@ -39,12 +39,17 @@ export default function Main() {
     manageLocalData()
   },[])
 
+  // useEffect(()=>{
+  //   console.log(loading)
+  // },[loading])
+
+
   return (
       <div className="flex flex-col justify-center items-center min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-rose-100 to-teal-100">
         {
           result ? <PokemonCard data={pokemon}/> : <Pokeball/>
         }
-        <InputForm setResult={setResult} setPokemon={setPokemon} setLocalData={setLocalData} localData={localData}/>
+        <InputForm setResult={setResult} setPokemon={setPokemon} setLoading={setLoading} setLocalData={setLocalData} localData={localData}/>
         <> 
           {
             loading ? <></>: <div className="flex flex-wrap flex-row w-3/5 justify-center items-center"><CreatedLinks localData={localData}/></div>

@@ -16,6 +16,7 @@ export default function InputForm(props:any) {
             await props.setResult(true)
             localStorage.setItem("shorty",JSON.stringify([...props.localData,pokemon]))
             await props.setLocalData([...props.localData,pokemon])
+            await props.setLoading(false)
         }
         catch(error) {
             console.log(error)
