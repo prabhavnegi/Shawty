@@ -26,7 +26,7 @@ export async function POST(req:NextRequest) {
         .on('error', err => console.log('Redis Client Error', err))
         .connect();
 
-        const expiry = String((+ new Date()) + 18000000)
+        const expiry = String((+ new Date()) + 1800000)
         await client.set(data.name+"exp", expiry,{"EX": 600});
         await client.set(data.name, target,{"EX": 600});
         await client.disconnect();
