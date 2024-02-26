@@ -8,5 +8,11 @@
 * **Prisma** is used as the ORM.  
 * It also has a cache layer and uses **Redis** as the cache database.  
 * It uses **tailwind** as a styling framework.  
-* Currently working on building the docker image, deploying it on the cloud, and making the UI mobile-friendly.  
+* Currently working on building the docker image, deploying it on the cloud, and making the UI mobile-friendly.
+
+ ![image](https://github.com/prabhavnegi/shorty/assets/44930394/40a4df69-92d2-4f4f-91ac-b491d1f6f9ca)
+
+
+![image](https://github.com/prabhavnegi/shorty/assets/44930394/e6d372eb-12e5-4f1f-ac70-9f7579edff2b)
+
 
