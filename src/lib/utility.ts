@@ -24,6 +24,6 @@ export function checkEnvironment() {
     let base_url =
     process.env.NODE_ENV === "development"
         ? "http://localhost:3000"
-        : "https://example.com"; // https://v2ds.netlify.app
+        : "http://localhost:3000";
     return base_url;
 };

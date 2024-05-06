@@ -3,6 +3,7 @@ import {checkRequest} from "@/lib/utility";
 import { NextRequest, NextResponse} from "next/server";
 import { prisma } from "@/lib/prismaClient";
 import { createClient } from 'redis';
+import { url } from "inspector";
 
 
 export async function POST(req:NextRequest) {
@@ -22,7 +23,7 @@ export async function POST(req:NextRequest) {
 
         if(i == 100) new Error("1")
 
-        const client = await createClient()
+        const client = await createClient({url:process.env.NODE_ENV === "production"? process.env.REDIS_URL :"" })
         .on('error', err => console.log('Redis Client Error', err))
         .connect();
 
